@@ -9,6 +9,8 @@ import {
 } from "@/constants/auth";
 import { match } from "ts-pattern";
 
+console.log("middleware");
+
 const copyCookies = (from: NextResponse, to: NextResponse) => {
   from.cookies.getAll().forEach((cookie) => {
     to.cookies.set({
